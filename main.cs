@@ -12,12 +12,23 @@ class Program
         int number = 42;
         // Count the number of guesses.
         int guesses = 0;
+        // Validate an int is entered.
+        bool inputValidation;
+        // Initialize the value to use for TryParse()
+        string isItInt = null;
 
         while (guess != number)
         {
             Console.WriteLine("Guess a number between " + min + " - " + max + " : ");
-            guess = Convert.ToInt32(Console.ReadLine());
+            isItInt = Console.ReadLine();
 
+            // Validate it as an int
+            inputValidation = int.TryParse(isItInt, out guess);
+            guess = Convert.ToInt32(guess);
+            if (inputValidation == false || guess < min || guess > max)
+            {
+                Console.WriteLine("Not a valid number.");
+            }
             // Another way to make it more interactive to the user if we use something like random.
             // if (guess > number){
             //   Console.WriteLine(guess + " is too high!");
