@@ -29,6 +29,10 @@ class Program
             {
                 Console.WriteLine("Not a valid number.");
             }
+            else if (guess != number)
+            {
+                Console.WriteLine("Incorrect");
+            }
             // Another way to make it more interactive to the user if we use something like random.
             // if (guess > number){
             //   Console.WriteLine(guess + " is too high!");
@@ -36,10 +40,7 @@ class Program
             //   Console.WriteLine(guess + " is too low!");
             // }
 
-            if (guess != number)
-            {
-                Console.WriteLine("Incorrect");
-            }
+
 
             guesses++;
         }
