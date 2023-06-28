@@ -1,3 +1,9 @@
+/*
+  Number Guessing Game
+  Created by Ian Collins
+  Number inteded to find is 42
+*/
+
 using System;
 
 class Program
